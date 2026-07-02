@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expert Orthopaedic Consultation | OrthoNow Bengaluru</title>
+  <meta name="description" content="Get an expert orthopaedic opinion for knee or back pain. Book your priority consultation at OrthoNow Bengaluru with senior specialists. 98% satisfaction rate.">
+  
+  <!-- GTM Container Snippet (Mock for implementation demo) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');
+  </script>
+  <!-- End GTM Container Snippet -->
+
+  <style>
+    /* ----------------------------------------------------
+       DESIGN SYSTEM (CSS VARIABLES & GLOBAL RESET)
+       ---------------------------------------------------- */
+    :root {
+      --primary: #0a192f;       /* Deep Navy - High trust, premium medical brand */
+      --secondary: #172a45;     /* Slate Navy for structural contrast */
+      --accent: #0d9488;        /* Teal - Energetic & sterile medical accent */
+      --accent-hover: #0f766e;  /* Darker Teal for interaction states */
+      --accent-light: #f0fdfa;  /* Mint Tint for badges and subtle blocks */
+      --text-main: #1e293b;     /* Deep slate for high-readability body copy */
+      --text-muted: #475569;    /* Medium slate for secondary details */
+      --bg-light: #f8fafc;      /* Crisp light grey background */
+      --border-color: #cbd5e1;  /* Subtle line delimiters */
+      --error-color: #e11d48;   /* Red for input validation error alerts */
+      --success-color: #16a34a; /* Green for success states */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ----------------------------------------------------
+       LAYOUT COMPONENTS
+       ---------------------------------------------------- */
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: var(--accent);
+      fill: currentColor;
+    }
+
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent-light);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-call:hover {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 4rem;
+    }
+
+    /* Grid Layout - Mobile First */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3rem;
+      }
+    }
+
+    /* Left Column - Hero Content */
+    .hero-content {
+      padding-top: 0.5rem;
+    }
+
+    .tagline {
+      display: inline-block;
+      background-color: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(13, 148, 136, 0.2);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.75rem;
+      }
+    }
+
+    .subheadline {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .subheadline {
+        font-size: 1.15rem;
+      }
+    }
+
+    /* Doctor Credibility Card */
+    .doctor-card {
+      background-color: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .doctor-info h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .doctor-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .doctor-tags {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      background-color: var(--bg-light);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Clinic Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-item {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 1rem 0.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-value {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Right Column - Form Container */
+    .form-wrapper {
+      background-color: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-header {
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .form-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Inputs and validation states */
+    .form-group {
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .input-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: all 0.2s ease;
+      background-color: #ffffff;
+      color: var(--text-main);
+    }
+
+    .input-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    }
+
+    /* Error Validation UI */
+    .input-error {
+      border-color: var(--error-color) !important;
+    }
+
+    .input-error:focus {
+      box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15) !important;
+    }
+
+    .error-message {
+      color: var(--error-color);
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--accent);
+      color: #ffffff;
+      border: none;
+      padding: 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 10px rgba(13, 148, 136, 0.2);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-submit:active {
+      transform: translateY(1px);
+    }
+
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #ffffff;
+      animation: spin 0.8s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .form-footer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+
+    /* ----------------------------------------------------
+       THANK YOU STATE UI (REPLACES FORM CONTAINER)
+       ---------------------------------------------------- */
+    .thank-you-container {
+      display: none;
+      text-align: center;
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--success-color);
+    }
+
+    .thank-you-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .thank-you-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .lead-badge {
+      background-color: var(--accent-light);
+      border: 1px solid rgba(13, 148, 136, 0.15);
+      border-radius: var(--radius-md);
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .lead-badge strong {
+      color: var(--primary);
+    }
+
+    .btn-wa-success {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #25d366;
+      color: #ffffff;
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);
+      transition: background-color 0.25s ease;
+    }
+
+    .btn-wa-success:hover {
+      background-color: #128c7e;
+    }
+
+    /* ----------------------------------------------------
+       TESTIMONIALS SECTION
+       ---------------------------------------------------- */
+    .reviews-section {
+      margin-top: 3rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 2rem;
+    }
+
+    .reviews-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .testimonial-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1rem;
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* ----------------------------------------------------
+       FLOATING WHATSAPP BUTTON (FLOATING UX WIDGET)
+       ---------------------------------------------------- */
+    .whatsapp-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #25d366;
+      color: #ffffff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .whatsapp-widget:hover {
+      transform: scale(1.08);
+      background-color: #128c7e;
+    }
+
+    .whatsapp-widget svg {
+      width: 32px;
+      height: 32px;
+      fill: #ffffff;
+    }
+
+    /* Screenreader utility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo-block" aria-label="OrthoNow Homepage">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 10.5h-5.5V5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5.5H5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5h5.5V19c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5.5H19c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/>
+        </svg>
+        <span>OrthoNow</span>
+      </a>
+      <a href="tel:+919876543210" class="btn-call" id="header_call_btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Call Now</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Core Page Wrapper -->
+  <main class="main-container">
+    <div class="hero-grid">
+      
+      <!-- Left Column: Marketing Message & Credibility -->
+      <section class="hero-content">
+        <span class="tagline">Bengaluru Campaign</span>
+        <h1>Get an Expert Orthopaedic Opinion</h1>
+        <p class="subheadline">
+          Don't let knee pain or back pain restrict your life. Consult top-tier orthopaedic doctors at OrthoNow's premium Bengaluru clinics.
+        </p>
+
+        <!-- Doctor Profile Card -->
+        <div class="doctor-card">
+          <div class="doctor-avatar" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div class="doctor-info">
+            <h3>Dr. Arvind Sabharwal, MS (Ortho)</h3>
+            <p>Senior Joint Replacement & Spine Specialist</p>
+            <p style="font-size: 0.75rem; margin-top: 0.15rem;">Ex-Chief Orthopaedics: Fortis & Manipal Hospital</p>
+            <div class="doctor-tags">
+              <span class="tag">18+ Yrs Exp</span>
+              <span class="tag">5,000+ Surgeries</span>
+              <span class="tag">Knee & Spine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinic Statistics Block -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">9</div>
+            <div class="stat-label">South India Clinics</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">50k+</div>
+            <div class="stat-label">Happy Patients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">98%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Lead Form Card & Thank You States -->
+      <section class="form-wrapper" id="form_section">
+        
+        <!-- Booking Form State -->
+        <form id="consultation_form" novalidate>
+          <div class="form-header">
+            <h2 class="form-title">Book Your Consultation</h2>
+            <p class="form-subtitle">Fill below to schedule your priority slot. No payment needed.</p>
+          </div>
+
+          <!-- Name Input -->
+          <div class="form-group">
+            <label for="patient_name">Full Name</label>
+            <input 
+              type="text" 
+              id="patient_name" 
+              class="input-control" 
+              placeholder="e.g., Ramesh Kumar" 
+              required 
+              autocomplete="name"
+            >
+            <div class="error-message" id="name_error" role="alert">Please enter your full name (minimum 3 alphabetical letters).</div>
+          </div>
+
+          <!-- Phone Input -->
+          <div class="form-group">
+            <label for="patient_phone">10-Digit Mobile Number</label>
+            <input 
+              type="tel" 
+              id="patient_phone" 
+              class="input-control" 
+              placeholder="e.g., 9876543210" 
+              required 
+              autocomplete="tel"
+            >
+            <div class="error-message" id="phone_error" role="alert">Please enter a valid 10-digit Indian mobile number (starting with 6-9).</div>
+          </div>
+
+          <!-- CTA Submit Button -->
+          <button type="submit" class="btn-submit" id="submit_lead_btn">
+            <span class="spinner" id="btn_spinner" aria-hidden="true"></span>
+            <span id="btn_text">Book Priority Slot Now</span>
+          </button>
+
+          <!-- Privacy compliance badge -->
+          <div class="form-footer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Your privacy is protected. Analytics are 100% non-PII.</span>
+          </div>
+        </form>
+
+        <!-- Thank You State (Hidden by default) -->
+        <div class="thank-you-container" id="thank_you_state">
+          <div class="success-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <h2 class="thank-you-title">Appointment Requested!</h2>
+          <p class="thank-you-text">
+            Thank you. Our orthopaedic coordinator is matching you with a specialist. We will contact you shortly to lock in your exact timing.
+          </p>
+          
+          <div class="lead-badge">
+            <div style="margin-bottom: 0.25rem;"><strong>Summary Details:</strong></div>
+            <div>• Name: <span id="summary_name"></span></div>
+            <div>• Mobile: <span id="summary_phone"></span></div>
+            <div>• City: Bengaluru Clinic</div>
+          </div>
+
+          <a href="https://wa.me/919876543210?text=Hi%20OrthoNow,%20I%20just%20booked%20a%20priority%20consultation%20for%20knee/back%20pain.%20Please%20confirm%20my%20slot." class="btn-wa-success" id="success_whatsapp_btn" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+              <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.371a9.946 9.946 0 0 0 4.779 1.218h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.922-7.062A9.922 9.922 0 0 0 12.012 2zm5.835 14.126c-.32.9-1.859 1.745-2.553 1.858-.636.104-1.46.183-3.864-.813-3.072-1.272-5.01-4.39-5.163-4.593-.153-.204-1.246-1.656-1.246-3.16 0-1.503.785-2.242 1.064-2.54.278-.299.613-.374.818-.374h.582c.186 0 .438-.07.687.528.257.614.876 2.133.953 2.288.077.155.128.336.025.542-.103.207-.155.337-.309.518-.155.18-.326.402-.464.539-.155.155-.316.324-.136.634.18.31.8 1.309 1.716 2.125 1.177 1.05 2.167 1.375 2.476 1.53.31.155.49.13.67-.077.18-.207.774-.904.98-1.214.206-.31.412-.258.69-.155.28.103 1.779.84 2.088.995.31.155.515.233.593.363.077.13.077.75-.243 1.65z"/>
+            </svg>
+            <span>Chat via WhatsApp</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Patient Reviews & Proof -->
+    <section class="reviews-section" aria-labelledby="patient-reviews-title">
+      <h2 class="reviews-title" id="patient-reviews-title">What Patient Professionals Say</h2>
+      
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-text">
+          "As a software engineer sitting 10+ hours a day, back pain became unbearable. Dr. Arvind diagnosed my spinal posture issue instantly. His rehab regimen got me pain-free in 4 weeks. No surgeries, pure focus on biomechanics."
+        </p>
+        <div class="testimonial-author">Rohan Deshmukh, 38, Technical Lead (Whitefield)</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Took my mother for severe knee arthritis. The level of care, modern clinic setup, and clear explanations from the doctor were exceptional. The priority slot saved us hours of waiting."
+        </p>
+        <div class="testimonial-author">Anjali Nair, 44, Senior Director (Indiranagar)</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp Chat Widget -->
+  <a 
+    href="https://wa.me/919876543210?text=Hi%20OrthoNow,%20I'm%20visiting%20your%20landing%20page%20and%20need%20details%20on%20orthopaedic%20consultations." 
+    class="whatsapp-widget" 
+    id="floating_whatsapp_widget" 
+    target="_blank" 
+    rel="noopener"
+    aria-label="Chat with OrthoNow on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.371a9.946 9.946 0 0 0 4.779 1.218h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.922-7.062A9.922 9.922 0 0 0 12.012 2zm5.835 14.126c-.32.9-1.859 1.745-2.553 1.858-.636.104-1.46.183-3.864-.813-3.072-1.272-5.01-4.39-5.163-4.593-.153-.204-1.246-1.656-1.246-3.16 0-1.503.785-2.242 1.064-2.54.278-.299.613-.374.818-.374h.582c.186 0 .438-.07.687.528.257.614.876 2.133.953 2.288.077.155.128.336.025.542-.103.207-.155.337-.309.518-.155.18-.326.402-.464.539-.155.155-.316.324-.136.634.18.31.8 1.309 1.716 2.125 1.177 1.05 2.167 1.375 2.476 1.53.31.155.49.13.67-.077.18-.207.774-.904.98-1.214.206-.31.412-.258.69-.155.28.103 1.779.84 2.088.995.31.155.515.233.593.363.077.13.077.75-.243 1.65z"/>
+    </svg>
+  </a>
+
+  <!-- ----------------------------------------------------
+       CORE JAVASCRIPT: VALIDATION & ANALYTICS DATA LAYER
+       ---------------------------------------------------- -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      const form = document.getElementById("consultation_form");
+      const nameInput = document.getElementById("patient_name");
+      const phoneInput = document.getElementById("patient_phone");
+      
+      const nameError = document.getElementById("name_error");
+      const phoneError = document.getElementById("phone_error");
+      
+      const btnSpinner = document.getElementById("btn_spinner");
+      const btnText = document.getElementById("btn_text");
+      const submitBtn = document.getElementById("submit_lead_btn");
+      
+      const formSection = document.getElementById("form_section");
+      const thankYouState = document.getElementById("thank_you_state");
+      
+      const summaryName = document.getElementById("summary_name");
+      const summaryPhone = document.getElementById("summary_phone");
+
+      // 1. Regular Expressions for strict local validation
+      // Name: Min 3 characters, alphabets and spaces only
+      const nameRegex = /^[a-zA-Z\s]{3,50}$/;
+      // Phone: 10-digit Indian mobile number format starting with 6, 7, 8, or 9
+      const phoneRegex = /^[6-9]\d{9}$/;
+
+      // 2. Real-Time (Inline) Validation Feedback
+      nameInput.addEventListener("input", function() {
+        if (nameRegex.test(nameInput.value.trim())) {
+          nameInput.classList.remove("input-error");
+          nameError.style.display = "none";
+        }
+      });
+
+      phoneInput.addEventListener("input", function() {
+        const rawPhone = phoneInput.value.trim().replace(/\D/g, ""); // Strip non-digits during type-ahead validation
+        if (phoneRegex.test(rawPhone)) {
+          phoneInput.classList.remove("input-error");
+          phoneError.style.display = "none";
+        }
+      });
+
+      // 3. Form Submit Handler
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Stop native postbacks
+
+        const nameVal = nameInput.value.trim();
+        const phoneVal = phoneInput.value.trim().replace(/\D/g, ""); // Standardize digit-only string
+
+        let isNameValid = nameRegex.test(nameVal);
+        let isPhoneValid = phoneRegex.test(phoneVal);
+
+        // Name Validation Check
+        if (!isNameValid) {
+          nameInput.classList.add("input-error");
+          nameError.style.display = "block";
+        } else {
+          nameInput.classList.remove("input-error");
+          nameError.style.display = "none";
+        }
+
+        // Phone Validation Check
+        if (!isPhoneValid) {
+          phoneInput.classList.add("input-error");
+          phoneError.style.display = "block";
+        } else {
+          phoneInput.classList.remove("input-error");
+          phoneError.style.display = "none";
+        }
+
+        // Focus management for accessibility
+        if (!isNameValid) {
+          nameInput.focus();
+          return;
+        }
+        if (!isPhoneValid) {
+          phoneInput.focus();
+          return;
+        }
+
+        // If validation succeeds:
+        // Transition button state to loading
+        submitBtn.disabled = true;
+        btnSpinner.style.display = "inline-block";
+        btnText.textContent = "Validating Slot...";
+
+        // Simulate API network delay (800ms) for high-end feel
+        setTimeout(function() {
+          // Transition layout to Thank You State
+          form.style.display = "none";
+          thankYouState.style.display = "block";
+
+          // Populate receipt details in UI (using localized values securely)
+          summaryName.textContent = nameVal;
+          summaryPhone.textContent = "+91 " + phoneVal.substring(0,5) + " " + phoneVal.substring(5);
+
+          // ----------------------------------------------------
+          // CRITICAL: FIRE GTM DATALAYER PUSH AFTER SUCCESSFUL VALIDATION ONLY
+          // ----------------------------------------------------
+          // Best Practice: To protect patient confidentiality and comply with Google Analytics PII 
+          // (Personally Identifiable Information) policies, we omit raw Names and Phone Numbers 
+          // from the dataLayer tracking object.
+          // ----------------------------------------------------
+          const dataLayerEvent = {
+            event: "consultation_form_submitted",
+            form_id: "orthonow_consultation_form",
+            page_name: "bengaluru_knee_back_pain_campaign",
+            lead_source: "google_paid_search",
+            submission_status: "success",
+            timestamp: new Date().toISOString(),
+            clinic_preference: "bengaluru_general"
+          };
+
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(dataLayerEvent);
+
+          // Print to Console for Developer Review & Loom Demo
+          console.group("%c[GTM Tracking] consultation_form_submitted", "color: #0d9488; font-weight: bold; font-size: 1.15rem;");
+          console.log("%c✓ Validation Success: Leads dataLayer push triggered.", "color: #16a34a; font-weight: 600;");
+          console.log("Pushed Data Object Structure:", dataLayerEvent);
+          console.log("%c⚠️ Non-PII Compliance Notice: Raw name & phone numbers excluded from analytics push.", "color: #e11d48; font-weight: 600;");
+          console.groupEnd();
+
+        }, 800);
+      });
+
+      // 4. Click Tracking for Call and WhatsApp Button Actions (Interactions)
+      document.getElementById("header_call_btn").addEventListener("click", function() {
+        const callTracking = {
+          event: "call_now_clicked",
+          click_location: "header_nav",
+          page_name: "bengaluru_knee_back_pain_campaign",
+          timestamp: new Date().toISOString()
+        };
+        window.dataLayer.push(callTracking);
+        
+        console.group("%c[GTM Tracking] call_now_clicked", "color: #0d9488; font-weight: bold;");
+        console.log("Pushed Data Object Structure:", callTracking);
+        console.groupEnd();
+      });
+
+      document.getElementById("floating_whatsapp_widget").addEventListener("click", function() {
+        const waTracking = {
+          event: "whatsapp_chat_initiated",
+          click_location: "floating_badge",
+          page_name: "bengaluru_knee_back_pain_campaign",
+          timestamp: new Date().toISOString()
+        };
+        window.dataLayer.push(waTracking);
+        
+        console.group("%c[GTM Tracking] whatsapp_chat_initiated", "color: #0d9488; font-weight: bold;");
+        console.log("Pushed Data Object Structure:", waTracking);
+        console.groupEnd();
+      });
+    });
+  </script>
+</body>
+</html>
